@@ -28,10 +28,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-brand-dark text-slate-100 font-sans selection:bg-brand-primary/20;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .glass {

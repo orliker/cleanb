@@ -22,8 +22,8 @@ export function HowItWorks() {
     },
     {
       icon: <HeartHandshake />,
-      title: "Acompanhar",
-      desc: "Garantimos a sua satisfação total. Relatório visual opcional via WhatsApp."
+      title: "Acompanhamento",
+      desc: "Focamo-nos na sua comodidade. Relatório visual opcional via WhatsApp ao finalizar."
     }
   ];
 
@@ -104,7 +104,7 @@ export function WhyChooseUs() {
            <div className="lg:col-span-5">
               <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">O Nosso Diferencial</span>
               <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 leading-[1.1] tracking-tighter">
-                A escolha de quem não abdica da <span className="text-brand-secondary italic">perfeição.</span>
+                A escolha de quem valoriza o <span className="text-brand-secondary italic">detalhe.</span>
               </h2>
               <p className="text-slate-400 mt-8 mb-12 text-xl leading-relaxed">
                 Mais do que uma limpeza, entregamos tranquilidade. O nosso padrão de exigência é o que nos torna referência em Lisboa e arredores.

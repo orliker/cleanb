@@ -61,12 +61,12 @@ export default function BeforeAfter() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">Resultados Reais</span>
+          <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">Transformação Visual</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-white">
-            A prova do nosso <span className="text-brand-secondary italic uppercase tracking-tighter">compromisso.</span>
+            A nossa <span className="text-brand-secondary italic uppercase tracking-tighter">atenção ao detalhe.</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto mt-4">
-            Arraste o cursor para comparar o estado inicial com o nosso resultado final. A transparência é o nosso valor base.
+            Deslize o cursor para explorar exemplos ilustrativos do nível de cuidado e limpeza que aplicamos em cada ambiente.
           </p>
         </div>
 
@@ -136,10 +136,10 @@ export default function BeforeAfter() {
 
             {/* Labels */}
             <div className="absolute top-6 left-6 z-20 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest text-white border border-white/20 pointer-events-none">
-              Antes
+              Sem Limpeza
             </div>
             <div className="absolute top-6 right-6 z-20 bg-brand-primary px-4 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest text-black shadow-lg pointer-events-none">
-              Depois
+              Com Limpeza
             </div>
 
             {/* Info Overlay on Hover (Desktop) */}

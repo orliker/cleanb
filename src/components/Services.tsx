@@ -13,7 +13,7 @@ const services = [
   {
     icon: <Building2 size={22} />,
     title: "Alojamento Local (Airbnb)",
-    description: "Gestão completa de limpezas entre estadias. Garantimos reviews de 5 estrelas na limpeza do seu imóvel.",
+    description: "Ajudamos a manter o imóvel limpo, organizado e preparado para receber os seus hóspedes com o máximo conforto.",
     image: siteImages.airbnb
   },
   {
@@ -37,7 +37,7 @@ const services = [
   {
     icon: <Shovel size={22} />,
     title: "Limpeza Pós-Obra",
-    description: "Eliminação radical de pó e resíduos. Entregamos o seu espaço renovado pronto a habitar.",
+    description: "Remoção cuidadosa de pó fino e resíduos. Entregamos o seu espaço renovado e pronto a habitar.",
     image: siteImages.postConstruction
   }
 ];

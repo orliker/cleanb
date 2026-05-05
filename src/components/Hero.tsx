@@ -100,14 +100,12 @@ export default function Hero() {
                 className="absolute bottom-10 right-[-20px] p-6 rounded-3xl bg-brand-dark/40 border border-white/10 backdrop-blur-xl shadow-2xl max-w-[220px]"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex -space-x-2">
-                    {[1,2,3].map(i => (
-                      <div key={i} className="w-8 h-8 rounded-full border-2 border-brand-dark bg-slate-800" />
-                    ))}
+                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-brand-secondary border border-white/20">
+                    <CheckCircle2 size={20} />
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Satisfação</p>
-                    <p className="text-sm font-bold text-white">+500 Clientes</p>
+                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Orçamento</p>
+                    <p className="text-sm font-bold text-white">Sem Compromisso</p>
                   </div>
                 </div>
               </motion.div>
