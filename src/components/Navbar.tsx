@@ -35,11 +35,9 @@ export default function Navbar() {
           <div className="w-10 h-10 bg-gradient-to-br from-brand-secondary to-brand-primary rounded-lg flex items-center justify-center text-white shadow-cyan-sm group-hover:scale-110 transition-transform">
             <Sparkles size={22} className="animate-pulse" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display font-bold text-lg leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-              INFINITY BRIGHT CLEAN PT
+            <span className="font-display font-bold text-2xl leading-tight tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+              CleanB
             </span>
-          </div>
         </a>
 
         {/* Desktop Links */}

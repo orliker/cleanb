@@ -10,40 +10,32 @@ const results = [
     label: 'Cozinha',
     before: siteImages.beforeKitchen,
     after: siteImages.afterKitchen,
-    title: 'Cozinha Restaurada',
-    desc: 'Remoção de gordura e brilho em superfícies de uso diário.'
+    title: 'Desinfecção Total de Cozinhas',
+    desc: 'Eliminação profunda de gorduras e polimento de todas as superfícies de aço e pedra.'
   },
   {
     id: 'wc',
-    label: 'Casa de Banho',
+    label: 'WC',
     before: siteImages.beforeBathroom,
     after: siteImages.afterBathroom,
-    title: 'Casa de Banho Impecável',
-    desc: 'Higienização e acabamento visual mais limpo e cuidado.'
+    title: 'Higienização de Casas de Banho',
+    desc: 'Remoção de calcário e restauração do brilho original em loiças e azulejos.'
   },
   {
     id: 'escritorio',
     label: 'Escritório',
     before: siteImages.beforeOffice,
     after: siteImages.afterOffice,
-    title: 'Escritório Organizado',
-    desc: 'Ambientes profissionais mais limpos, frescos e apresentáveis.'
+    title: 'Espaços de Trabalho Renovados',
+    desc: 'Limpeza minuciosa de postos de trabalho, garantindo um ambiente fresco e produtivo.'
   },
   {
     id: 'obra',
     label: 'Pós-Obra',
     before: siteImages.beforePostConstruction,
     after: siteImages.afterPostConstruction,
-    title: 'Pós-Obra',
-    desc: 'Remoção de pó, resíduos e preparação final do espaço.'
-  },
-  {
-    id: 'carro',
-    label: 'Automóvel',
-    before: siteImages.beforeCar,
-    after: siteImages.afterCar,
-    title: 'Interior Automóvel',
-    desc: 'Higienização e cuidado visual para interiores automóveis.'
+    title: 'Finalização Pós-Obra',
+    desc: 'A etapa final para transformar um estaleiro numa casa pronta a habitar.'
   }
 ];
 

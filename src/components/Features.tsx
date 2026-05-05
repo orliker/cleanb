@@ -7,23 +7,23 @@ export function HowItWorks() {
   const steps = [
     {
       icon: <MessageSquare />,
-      title: "Contacto Inicial",
-      desc: "Fale connosco pelo WhatsApp para nos dizer o que precisa."
-    },
-    {
-      icon: <Camera />,
-      title: "Avaliação Visual",
-      desc: "Envie fotos ou vídeos do espaço para uma análise rápida."
-    },
-    {
-      icon: <FileText />,
-      title: "Orçamento Justo",
-      desc: "Receba uma proposta detalhada e adaptada ao seu caso."
+      title: "Pedir Orçamento",
+      desc: "Envie-nos uma mensagem rápida no WhatsApp. Respondemos em minutos."
     },
     {
       icon: <CalendarRange />,
-      title: "Agendamento",
-      desc: "Escolha o dia e hora que lhe for mais conveniente."
+      title: "Agendar",
+      desc: "Escolha o dia e hora que melhor se adapta à sua rotina."
+    },
+    {
+      icon: <Zap />,
+      title: "Limpeza",
+      desc: "A nossa equipa profissional cuida de tudo com rigor e detalhe."
+    },
+    {
+      icon: <HeartHandshake />,
+      title: "Acompanhar",
+      desc: "Garantimos a sua satisfação total. Relatório visual opcional via WhatsApp."
     }
   ];
 
@@ -103,11 +103,11 @@ export function WhyChooseUs() {
          <div className="grid lg:grid-cols-12 gap-20 items-center">
            <div className="lg:col-span-5">
               <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">O Nosso Diferencial</span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 leading-tight">
-                Porque somos a escolha certa para <span className="text-brand-secondary italic">Lisboa?</span>
+              <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 leading-[1.1] tracking-tighter">
+                A escolha de quem não abdica da <span className="text-brand-secondary italic">perfeição.</span>
               </h2>
-              <p className="text-slate-400 mt-6 mb-10 text-lg">
-                A nossa missão vai além da higiene. Queremos que sinta orgulho e paz ao entrar no seu espaço renovado.
+              <p className="text-slate-400 mt-8 mb-12 text-xl leading-relaxed">
+                Mais do que uma limpeza, entregamos tranquilidade. O nosso padrão de exigência é o que nos torna referência em Lisboa e arredores.
               </p>
               
               <div className="relative rounded-[40px] overflow-hidden border border-white/10 group mb-10 lg:mb-0">

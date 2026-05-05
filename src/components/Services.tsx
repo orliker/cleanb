@@ -6,39 +6,39 @@ import { siteImages } from '../constants';
 const services = [
   {
     icon: <Home size={22} />,
-    title: "Limpeza Residencial",
-    description: "Cuidado completo para a sua casa. Da manutenção semanal à limpeza profunda periódica.",
+    title: "Limpeza Doméstica",
+    description: "Cuidado minucioso para a sua casa. Manutenção regular ou ocasional com o mais alto padrão de higiene.",
     image: siteImages.residential
   },
   {
     icon: <Building2 size={22} />,
-    title: "Limpeza de Condomínios",
-    description: "Gestão de áreas comuns com rigor e assiduidade para garantir o bem-estar dos moradores.",
-    image: siteImages.condominium
+    title: "Alojamento Local (Airbnb)",
+    description: "Gestão completa de limpezas entre estadias. Garantimos reviews de 5 estrelas na limpeza do seu imóvel.",
+    image: siteImages.airbnb
   },
   {
     icon: <Briefcase size={22} />,
     title: "Limpeza de Escritórios",
-    description: "Espaços de trabalho impecáveis que promovem a produtividad e o profissionalismo.",
+    description: "Ambientes de trabalho produtivos e saudáveis. Focamos na desinfecção e organização do seu negócio.",
     image: siteImages.office
+  },
+  {
+    icon: <Zap size={22} />,
+    title: "Limpeza Profunda",
+    description: "Recuperação total de espaços. Ideal para limpezas de primavera ou quando o detalhe é a prioridade absoluta.",
+    image: siteImages.deepCleaning
+  },
+  {
+    icon: <Building2 size={22} />,
+    title: "Limpeza de Condomínios",
+    description: "Zonas comuns sempre impecáveis. Profissionalismo e assiduidade para o bem-estar de todos os vizinhos.",
+    image: siteImages.condominium
   },
   {
     icon: <Shovel size={22} />,
     title: "Limpeza Pós-Obra",
-    description: "Eliminação total de resíduos, pó fino e sujidade difícil após obras ou remodelações.",
+    description: "Eliminação radical de pó e resíduos. Entregamos o seu espaço renovado pronto a habitar.",
     image: siteImages.postConstruction
-  },
-  {
-    icon: <Car size={22} />,
-    title: "Limpeza Automotiva",
-    description: "Detalhamento e higienização profunda de interiores para que o seu carro se sinta novo.",
-    image: siteImages.automotive
-  },
-  {
-    icon: <Zap size={22} />,
-    title: "Limpezas Profundas",
-    description: "Recuperação total de espaços críticos: cozinhas, WC e áreas negligenciadas.",
-    image: siteImages.deepCleaning
   }
 ];
 

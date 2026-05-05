@@ -5,7 +5,7 @@ import { ChevronDown, MessageCircle, Phone, Instagram, Send, Sparkles } from 'lu
 const faqs = [
   {
     q: "Que tipos de limpeza realizam?",
-    a: "Realizamos limpezas residenciais (manutenção e profunda), condomínios, escritórios, pós-obra, limpezas por mudança (check-in/check-out) e limpeza de estofos/automóvel."
+    a: "Realizamos limpezas domésticas (manutenção e profunda), condomínios, escritórios, Airbnb (Alojamento Local) e pós-obra."
   },
   {
     q: "Como posso pedir um orçamento?",
@@ -83,8 +83,8 @@ export function Footer() {
                 <div className="w-8 h-8 bg-gradient-to-br from-brand-secondary to-brand-primary rounded-lg flex items-center justify-center text-white shadow-cyan-sm">
                   <Sparkles size={18} />
                 </div>
-                <span className="font-display font-bold text-xl leading-tight text-white uppercase tracking-tight">
-                  Infinity <span className="text-brand-secondary">Bright</span>
+                <span className="font-display font-bold text-2xl leading-tight text-white uppercase tracking-tight">
+                  Clean<span className="text-brand-secondary">B</span>
                 </span>
              </div>
              <p className="text-slate-500 text-sm leading-relaxed">
@@ -94,7 +94,7 @@ export function Footer() {
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-secondary hover:bg-brand-primary hover:text-black transition-all border border-white/5">
                   <MessageCircle size={20} />
                 </a>
-                <a href="https://instagram.com/infinity.bright_clean.pt" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-secondary hover:bg-brand-primary hover:text-black transition-all border border-white/5">
+                <a href="https://instagram.com/cleanb.pt" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-secondary hover:bg-brand-primary hover:text-black transition-all border border-white/5">
                   <Instagram size={20} />
                 </a>
                 <a href="tel:+351926114896" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-secondary hover:bg-brand-primary hover:text-black transition-all border border-white/5">
@@ -142,11 +142,11 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/5 gap-6">
           <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">
-            © {new Date().getFullYear()} Infinity Bright Clean PT. Lisboa & Arredores.
+            © {new Date().getFullYear()} CleanB. Lisboa & Arredores.
           </p>
           <div className="flex gap-8 text-[10px] text-slate-600 font-bold uppercase tracking-widest">
             <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" /> Online Agora</span>
-            <span className="text-slate-500">@infinity.bright_clean.pt</span>
+            <span className="text-slate-500">@cleanb.pt</span>
           </div>
         </div>
       </div>

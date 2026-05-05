@@ -24,13 +24,13 @@ export default function Hero() {
             Excelência em Lisboa
           </div>
           
-          <h1 className="font-display text-5xl md:text-7xl font-light leading-[1.1] tracking-tight text-white">
-            Limpezas que <br/>
-            <span className="font-bold italic text-brand-secondary">transformam</span> o seu espaço.
+          <h1 className="font-display text-5xl md:text-8xl font-light leading-[1] tracking-tighter text-white">
+            O brilho que o seu <br/>
+            <span className="font-bold italic text-brand-secondary">espaço</span> merece.
           </h1>
           
-          <p className="text-lg text-slate-400 max-w-md leading-relaxed">
-            Residencial, empresarial e automóvel com um padrão premium de detalhe e confiança. Transformamos o seu ambiente com precisão.
+          <p className="text-xl text-slate-400 max-w-lg leading-relaxed">
+            Especialistas em limpezas premium em Lisboa. Transformamos casas e empresas com rigor, confiança e atenção extrema ao detalhe.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">

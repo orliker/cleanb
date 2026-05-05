@@ -41,13 +41,17 @@ export default function App() {
         <Hero />
         
         {/* Trust Bar */}
-        <div className="bg-brand-dark border-y border-white/5 py-12 px-6">
-          <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-8 text-[12px] font-bold uppercase tracking-[0.4em] text-slate-600">
-             <div className="flex items-center gap-2 hover:text-brand-secondary transition-colors cursor-default">LISBOA</div>
-             <div className="flex items-center gap-2 hover:text-brand-secondary transition-colors cursor-default">SINTRA</div>
-             <div className="flex items-center gap-2 hover:text-brand-secondary transition-colors cursor-default">CASCAIS</div>
-             <div className="flex items-center gap-2 hover:text-brand-secondary transition-colors cursor-default">OEIRAS</div>
-             <div className="flex items-center gap-2 hover:text-brand-secondary transition-colors cursor-default">LOURES</div>
+        <div className="bg-brand-dark border-y border-white/5 py-12 px-6 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-center text-[10px] font-bold text-slate-500 uppercase tracking-[0.5em] mb-8">Zonas de Atendimento Prioritário</p>
+            <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 text-[12px] font-bold uppercase tracking-[0.4em] text-slate-400">
+               {['Lisboa', 'Sintra', 'Cascais', 'Oeiras', 'Loures', 'Almada'].map((city) => (
+                 <div key={city} className="flex items-center gap-3 hover:text-brand-secondary transition-all duration-500 cursor-default group">
+                   <div className="w-1 h-1 bg-brand-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                   {city}
+                 </div>
+               ))}
+            </div>
           </div>
         </div>
 
@@ -62,10 +66,10 @@ export default function App() {
         {/* High Impact Gallery Section */}
         <section className="section-padding bg-brand-dark overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16">
-              <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">Portefólio Visual</span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-white">
-                O nosso <span className="text-brand-secondary italic">padrão de ouro</span> em imagens.
+            <div className="mb-20">
+              <span className="text-brand-secondary font-bold tracking-[0.3em] uppercase text-xs">Portefólio de Excelência</span>
+              <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
+                O pormenor que nos <span className="text-brand-secondary italic">distingue.</span>
               </h2>
             </div>
             
@@ -104,12 +108,12 @@ export default function App() {
                 <Sparkle size={32} className="animate-sparkle" />
              </div>
 
-             <h2 className="font-display text-4xl md:text-7xl font-light leading-[1.1] tracking-tight text-white mb-8">
-               Pronto para o <span className="font-bold italic text-brand-secondary">brilho</span> premium?
+             <h2 className="font-display text-5xl md:text-8xl font-light leading-[1] tracking-tighter text-white mb-10">
+               O seu espaço <span className="font-bold italic text-brand-secondary">impecável</span> à distância de um clique.
              </h2>
              
-             <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-               Peça um orçamento simples pelo WhatsApp e receba uma proposta adaptada ao seu caso. Resposta rápida e sem burocracias.
+             <p className="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto mb-16 leading-relaxed">
+               Deixe o trabalho pesado connosco e aproveite o seu tempo livre. Peça o seu orçamento personalizado via WhatsApp agora mesmo.
              </p>
 
              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
