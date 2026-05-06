@@ -1,103 +1,75 @@
-import { motion } from 'motion/react';
-import { Home, Building2, Briefcase, Shovel, Car, Zap, ArrowRight } from 'lucide-react';
-import { VisualImage } from './VisualImage';
-import { siteImages } from '../constants';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Home, 
+  Briefcase, 
+  Building2, 
+  HardHat, 
+  Sparkles, 
+  Building, 
+  MapPin,
+  CheckCircle2,
+  ArrowRight
+} from 'lucide-react';
+import { companyData } from '../data/companyData';
 
-const services = [
-  {
-    icon: <Home size={22} />,
-    title: "Limpeza Doméstica",
-    description: "Cuidado minucioso para a sua casa. Manutenção regular ou ocasional com o mais alto padrão de higiene.",
-    image: siteImages.residential
-  },
-  {
-    icon: <Building2 size={22} />,
-    title: "Alojamento Local (Airbnb)",
-    description: "Ajudamos a manter o imóvel limpo, organizado e preparado para receber os seus hóspedes com o máximo conforto.",
-    image: siteImages.airbnb
-  },
-  {
-    icon: <Briefcase size={22} />,
-    title: "Limpeza de Escritórios",
-    description: "Ambientes de trabalho produtivos e saudáveis. Focamos na desinfecção e organização do seu negócio.",
-    image: siteImages.office
-  },
-  {
-    icon: <Zap size={22} />,
-    title: "Limpeza Profunda",
-    description: "Recuperação total de espaços. Ideal para limpezas de primavera ou quando o detalhe é a prioridade absoluta.",
-    image: siteImages.deepCleaning
-  },
-  {
-    icon: <Building2 size={22} />,
-    title: "Limpeza de Condomínios",
-    description: "Zonas comuns sempre impecáveis. Profissionalismo e assiduidade para o bem-estar de todos os vizinhos.",
-    image: siteImages.condominium
-  },
-  {
-    icon: <Shovel size={22} />,
-    title: "Limpeza Pós-Obra",
-    description: "Remoção cuidadosa de pó fino e resíduos. Entregamos o seu espaço renovado e pronto a habitar.",
-    image: siteImages.postConstruction
-  }
-];
+const iconMap: Record<string, React.ReactNode> = {
+  Home: <Home size={32} />,
+  Briefcase: <Briefcase size={32} />,
+  Building2: <Building2 size={32} />,
+  HardHat: <HardHat size={32} />,
+  Sparkles: <Sparkles size={32} />,
+  Building: <Building size={32} />,
+  MapPin: <MapPin size={32} />
+};
 
-export default function Services() {
-  const whatsappUrl = "https://wa.me/351926114896?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20servi%C3%A7o%20de%20";
-
+const Services = () => {
   return (
     <section id="servicos" className="section-padding bg-brand-dark relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-900/10 rounded-full blur-[120px] -z-0" />
+      {/* Glows */}
+      <div className="absolute top-1/2 left-0 w-[40%] h-[40%] bg-brand-primary/5 rounded-full blur-[120px] -z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">
-            <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">Nossas Especialidades</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 leading-tight text-white">
-              Soluções de limpeza <span className="text-brand-secondary italic uppercase tracking-tighter">premium</span> para cada espaço.
+            <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">Os nossos serviços</span>
+            <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
+              Soluções <span className="text-gradient-teal italic">completas</span> para o seu espaço.
             </h2>
           </div>
-          <p className="text-slate-400 max-w-sm">
-            Atuamos em diversos setores com o mesmo padrão de excelência e atenção minuciosa aos detalhes.
+          <p className="text-slate-400 text-lg max-w-sm">
+            Desde limpezas residenciais a grandes espaços comerciais, garantimos excelência em Portugal e Angola.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {companyData.services.map((service, index) => (
             <motion.div
-              key={index}
+              key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group glass p-8 rounded-[32px] hover:bg-white/10 transition-all duration-500 flex flex-col border border-white/10"
+              viewport={{ once: true }}
+              className="premium-card p-10 group"
             >
-              <div className="relative h-48 mb-6 rounded-2xl overflow-hidden shadow-inner bg-slate-800">
-                <VisualImage 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full group-hover:scale-110 opacity-70 group-hover:opacity-100 transition-all duration-700" 
-                  overlay
-                />
-                <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/5 backdrop-blur-md rounded-xl flex items-center justify-center text-brand-secondary group-hover:bg-brand-primary group-hover:text-black transition-all">
-                  {service.icon}
-                </div>
+              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500">
+                {iconMap[service.icon] || <CheckCircle2 size={32} />}
               </div>
               
-              <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
-              <p className="text-slate-400 leading-relaxed mb-8 flex-grow text-sm">
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-brand-primary transition-colors">
+                {service.title}
+              </h3>
+              
+              <p className="text-slate-400 mb-8 leading-relaxed">
                 {service.description}
               </p>
+
               <a 
-                href={`${whatsappUrl}${service.title.replace(' ', '%20')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 font-bold text-brand-secondary group/link hover:gap-4 transition-all text-sm uppercase tracking-widest"
+                href={companyData.contact.whatsappLink}
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-primary group-hover:gap-4 transition-all"
               >
-                Pedir Orçamento
-                <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                Solicitar orçamento
+                <ArrowRight size={16} />
               </a>
             </motion.div>
           ))}
@@ -105,4 +77,6 @@ export default function Services() {
       </div>
     </section>
   );
-}
+};
+
+export default Services;

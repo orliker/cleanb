@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Sparkle, ArrowLeftRight } from 'lucide-react';
 import { VisualImage } from './VisualImage';
 import { siteImages } from '../constants';
@@ -57,16 +57,16 @@ export default function BeforeAfter() {
   return (
     <section id="resultados" className="section-padding bg-brand-dark relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[150px] -z-0" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[150px] -z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">Transformação Visual</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-white">
-            A nossa <span className="text-brand-secondary italic uppercase tracking-tighter">atenção ao detalhe.</span>
+          <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">Transformação Visual</span>
+          <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
+            A nossa <span className="text-gradient-teal italic">atenção</span> ao detalhe.
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto mt-4">
-            Deslize o cursor para explorar exemplos ilustrativos do nível de cuidado e limpeza que aplicamos em cada ambiente.
+          <p className="text-slate-400 max-w-xl mx-auto mt-6 text-lg">
+            Explore a transformação real dos espaços através da nossa intervenção profissional.
           </p>
         </div>
 
@@ -79,9 +79,9 @@ export default function BeforeAfter() {
                 setActiveTab(res);
                 setSliderPos(50);
               }}
-              className={`px-6 py-3 rounded-full font-bold transition-all ${
+              className={`px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
                 activeTab.id === res.id 
-                ? 'bg-brand-primary text-black shadow-cyan' 
+                ? 'bg-brand-primary text-white shadow-teal' 
                 : 'bg-white/5 text-slate-400 hover:bg-white/10 border border-white/10'
               }`}
             >
@@ -96,7 +96,7 @@ export default function BeforeAfter() {
             key={activeTab.id}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative aspect-video lg:aspect-[16/9] bg-slate-900 rounded-[32px] overflow-hidden shadow-2xl border border-white/10 cursor-ew-resize group"
+            className="relative aspect-video lg:aspect-[16/9] bg-brand-darker rounded-[48px] overflow-hidden shadow-premium border border-white/10 cursor-ew-resize group"
             ref={containerRef}
             onMouseMove={(e) => e.buttons === 1 && handleMove(e)}
             onMouseDown={handleMove}
@@ -106,7 +106,7 @@ export default function BeforeAfter() {
             <VisualImage 
               src={activeTab.after} 
               alt="After cleaning" 
-              className="absolute inset-0 w-full h-full" 
+              className="absolute inset-0 w-full h-full object-cover" 
             />
             
             {/* Before Image (Clipping) */}
@@ -119,7 +119,7 @@ export default function BeforeAfter() {
               <VisualImage 
                 src={activeTab.before} 
                 alt="Before cleaning" 
-                className="w-full h-full" 
+                className="w-full h-full object-cover grayscale-[30%]" 
               />
             </div>
 
@@ -128,30 +128,32 @@ export default function BeforeAfter() {
               className="absolute top-0 bottom-0 w-1 bg-white z-20 cursor-ew-resize"
               style={{ left: `${sliderPos}%` }}
             >
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 shadow-2xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowLeftRight size={14} />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-brand-dark px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-3 shadow-2xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                <ArrowLeftRight size={16} />
                 <span>Comparar</span>
               </div>
             </div>
 
             {/* Labels */}
-            <div className="absolute top-6 left-6 z-20 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest text-white border border-white/20 pointer-events-none">
-              Sem Limpeza
+            <div className="absolute top-8 left-8 z-20 glass px-5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest text-white border border-white/10 pointer-events-none">
+              Antes
             </div>
-            <div className="absolute top-6 right-6 z-20 bg-brand-primary px-4 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest text-black shadow-lg pointer-events-none">
-              Com Limpeza
+            <div className="absolute top-8 right-8 z-20 bg-brand-primary px-5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest text-white shadow-teal pointer-events-none">
+              Depois
             </div>
 
             {/* Info Overlay on Hover (Desktop) */}
-            <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-brand-dark to-transparent text-white opacity-0 group-hover/motion:opacity-100 group-hover:opacity-100 transition-opacity z-10">
-               <h4 className="text-xl font-bold">{activeTab.title}</h4>
-               <p className="text-sm opacity-80">{activeTab.desc}</p>
+            <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-brand-dark to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity z-10">
+               <h4 className="text-2xl font-bold mb-2 tracking-tight">{activeTab.title}</h4>
+               <p className="text-slate-300 max-w-xl">{activeTab.desc}</p>
             </div>
           </motion.div>
           
-          <div className="mt-8 text-center md:hidden">
-            <p className="text-sm text-slate-500 animate-pulse flex items-center justify-center gap-2 font-bold uppercase tracking-widest">
-              <ChevronLeft size={16} /> Arraste para comparar <ChevronRight size={16} />
+          <div className="mt-12 text-center md:hidden">
+            <p className="text-xs text-slate-500 animate-pulse flex items-center justify-center gap-3 font-bold uppercase tracking-widest">
+              <ChevronLeft size={16} className="text-brand-primary" /> 
+              Arraste para comparar 
+              <ChevronRight size={16} className="text-brand-primary" />
             </p>
           </div>
         </div>

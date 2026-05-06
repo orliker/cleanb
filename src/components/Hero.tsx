@@ -1,118 +1,128 @@
-import { motion } from 'motion/react';
-import { MousePointer2, ChevronRight, CheckCircle2, Sparkle } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Globe, Sparkles, ShieldCheck } from 'lucide-react';
+import { companyData } from '../data/companyData';
 import { VisualImage } from './VisualImage';
-import { siteImages } from '../constants';
 
-export default function Hero() {
-  const whatsappUrl = "https://wa.me/351926114896?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20um%20servi%C3%A7o%20de%20limpeza.";
-
+const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-dark">
-      {/* Background Elements */}
-      <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-cyan-900/20 rounded-full blur-[120px] -z-10" />
-      <div className="absolute bottom-[-100px] right-[-100px] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[150px] -z-10" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-dark">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-[10%] -right-[10%] w-[60%] h-[60%] bg-brand-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
+        <div className="absolute -bottom-[10%] -left-[10%] w-[50%] h-[50%] bg-brand-secondary/5 rounded-full blur-[100px]" />
+      </div>
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center section-padding w-full relative z-10">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col gap-8"
-        >
-          <div className="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 text-brand-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest w-fit">
-            <span className="w-1.5 h-1.5 bg-brand-secondary rounded-full animate-pulse" />
-            Excelência em Lisboa
-          </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          <h1 className="font-display text-5xl md:text-8xl font-light leading-[1] tracking-tighter text-white">
-            O brilho que o seu <br/>
-            <span className="font-bold italic text-brand-secondary">espaço</span> merece.
-          </h1>
-          
-          <p className="text-xl text-slate-400 max-w-lg leading-relaxed">
-            Especialistas em limpezas premium em Lisboa. Transformamos casas e empresas com rigor, confiança e atenção extrema ao detalhe.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-primary text-black px-8 py-5 rounded-2xl font-bold shadow-cyan hover:bg-brand-secondary active:scale-95 transition-all text-center flex items-center justify-center gap-3 lg:text-lg group"
-            >
-              Pedir Orçamento no WhatsApp
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a 
-              href="#servicos"
-              className="bg-white/5 text-white px-8 py-5 rounded-2xl font-bold border border-white/10 hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2 lg:text-lg"
-            >
-              Ver Serviços
-            </a>
-          </div>
-
-          <div className="grid grid-cols-2 sm:flex items-center gap-6 pt-6">
-            <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
-              <CheckCircle2 className="text-brand-secondary" size={18} />
-              Atendimento Rápido
+          {/* Left Content */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
+              <Globe size={16} className="text-brand-primary animate-pulse" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light">Portugal & Angola</span>
             </div>
-            <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
-              <CheckCircle2 className="text-brand-secondary" size={18} />
-              Brilho Garantido
-            </div>
-          </div>
-        </motion.div>
 
-        {/* Visual Composition */}
-        <motion.div
-          initial={{ opacity: 0, shadow: "none" }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="relative hidden lg:block"
-        >
-          <div className="relative z-10 p-4">
-            <div className="aspect-square bg-gradient-to-br from-brand-primary to-brand-secondary rounded-[40px] shadow-2xl relative overflow-hidden group border border-white/20">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9] mb-8">
+              Limpezas <span className="text-gradient-teal italic">profissionais</span> em Portugal e Angola.
+            </h1>
+
+            <p className="text-slate-400 text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
+              {companyData.description} Especialistas em Luanda e nas principais zonas de Portugal.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <a 
+                href={companyData.contact.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto bg-brand-primary text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-teal hover:bg-brand-secondary active:scale-95 transition-all flex items-center justify-center gap-3"
+              >
+                Pedir orçamento
+                <ArrowRight size={20} />
+              </a>
+              <a 
+                href="#portfolio"
+                className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3"
+              >
+                Ver portfólio
+              </a>
+            </div>
+
+            <div className="mt-16 grid grid-cols-3 gap-8 border-t border-white/5 pt-12">
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white mb-1">100%</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Confiança</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white mb-1">2+</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Países</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white mb-1">24/7</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Suporte</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Visual */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative aspect-square md:aspect-[4/5] rounded-[48px] overflow-hidden border border-white/10 shadow-2xl">
               <VisualImage 
-                src={siteImages.hero} 
-                alt="Hero cleaning" 
-                className="absolute inset-0 group-hover:scale-110 transition-transform duration-700 w-full h-full" 
-                overlay 
+                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80"
+                alt="Cleaning Professional"
+                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000 scale-105"
               />
-              
-              {/* Overlay Cards - Floating 3D feel */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-10 left-[-20px] p-6 rounded-3xl bg-brand-dark/60 border border-white/10 backdrop-blur-xl shadow-2xl max-w-[200px] z-10"
-              >
-                <div className="flex flex-col gap-2">
-                  <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-black">
-                    <Sparkle size={20} />
-                  </div>
-                  <p className="text-sm font-bold text-white">Recuperação Total</p>
-                  <p className="text-xs text-slate-400">Brilho profissional em cada detalhe.</p>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-10 right-[-20px] p-6 rounded-3xl bg-brand-dark/40 border border-white/10 backdrop-blur-xl shadow-2xl max-w-[220px]"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-brand-secondary border border-white/20">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div className="flex flex-col">
-                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Orçamento</p>
-                    <p className="text-sm font-bold text-white">Sem Compromisso</p>
-                  </div>
-                </div>
-              </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
             </div>
-          </div>
-        </motion.div>
+
+            {/* Floating Cards */}
+            <motion.div 
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-10 -right-10 glass p-6 rounded-3xl shadow-premium hidden md:block"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-brand-primary/20 rounded-2xl flex items-center justify-center text-brand-primary">
+                  <ShieldCheck size={28} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Qualidade Garantida</p>
+                  <p className="text-white font-bold">Serviço Premium</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              animate={{ y: [0, 20, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -bottom-10 -left-10 glass p-6 rounded-3xl shadow-premium hidden md:block"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-brand-secondary/20 rounded-2xl flex items-center justify-center text-brand-secondary">
+                  <Sparkles size={28} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Equipa Especializada</p>
+                  <p className="text-white font-bold">Resultados Impecáveis</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

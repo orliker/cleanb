@@ -1,7 +1,8 @@
-import { motion } from 'motion/react';
-import { MessageSquare, Camera, FileText, CalendarRange, CheckCircle2, ShieldCheck, HeartHandshake, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { MessageSquare, Camera, FileText, CalendarRange, CheckCircle2, ShieldCheck, HeartHandshake, Zap, ArrowRight } from 'lucide-react';
 import { VisualImage } from './VisualImage';
 import { siteImages } from '../constants';
+import { companyData } from '../data/companyData';
 
 export function HowItWorks() {
   const steps = [
@@ -29,15 +30,17 @@ export function HowItWorks() {
 
   return (
     <section id="processo" className="section-padding bg-brand-dark relative overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-cyan-900/5 rounded-full blur-[100px] -z-0" />
+      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-brand-primary/5 rounded-full blur-[100px] -z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">Passo a Passo</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-white">Simples, prático e eficiente.</h2>
+        <div className="text-center mb-20">
+          <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">Passo a Passo</span>
+          <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
+            Simples, <span className="text-gradient-teal italic">prático</span> e eficiente.
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-4 gap-8">
           {steps.map((step, i) => (
             <motion.div 
               key={i}
@@ -47,19 +50,14 @@ export function HowItWorks() {
               transition={{ delay: i * 0.15 }}
               className="relative group text-center"
             >
-              {/* Connector Line (Desktop) */}
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-white/5 -z-10" />
-              )}
-              
-              <div className="w-24 h-24 bg-white/5 border border-white/10 shadow-xl rounded-3xl flex items-center justify-center mx-auto mb-6 text-brand-secondary group-hover:bg-brand-primary group-hover:text-black transition-all duration-500 transform group-hover:rotate-6">
+              <div className="w-24 h-24 bg-white/5 border border-white/10 shadow-xl rounded-[32px] flex items-center justify-center mx-auto mb-8 text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-6">
                 {step.icon}
               </div>
               
-              <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+              <h3 className="text-xl font-bold mb-4 text-white">{step.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">{step.desc}</p>
               
-              <div className="mt-4 inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 text-slate-500 text-xs font-bold ring-4 ring-brand-dark">
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 text-brand-primary text-xs font-bold ring-4 ring-brand-dark">
                 0{i + 1}
               </div>
             </motion.div>
@@ -95,31 +93,31 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="section-padding bg-[#0a0f12] text-white overflow-hidden relative">
+    <section className="section-padding bg-brand-darker text-white overflow-hidden relative">
        {/* Background glow shadow */}
-       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-900/10 rounded-full blur-[120px]" />
+       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[120px]" />
 
        <div className="max-w-7xl mx-auto relative z-10">
          <div className="grid lg:grid-cols-12 gap-20 items-center">
            <div className="lg:col-span-5">
-              <span className="text-brand-secondary font-bold tracking-widest uppercase text-xs">O Nosso Diferencial</span>
-              <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 leading-[1.1] tracking-tighter">
-                A escolha de quem valoriza o <span className="text-brand-secondary italic">detalhe.</span>
+              <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">O Nosso Diferencial</span>
+              <h2 className="font-display text-5xl md:text-7xl font-bold mt-4 leading-[1] tracking-tighter">
+                A escolha de quem valoriza o <span className="text-gradient-teal italic">detalhe.</span>
               </h2>
               <p className="text-slate-400 mt-8 mb-12 text-xl leading-relaxed">
-                Mais do que uma limpeza, entregamos tranquilidade. O nosso padrão de exigência é o que nos torna referência em Lisboa e arredores.
+                Mais do que uma limpeza, entregamos tranquilidade. O nosso padrão de exigência é o que nos torna referência entre Portugal e Angola.
               </p>
               
-              <div className="relative rounded-[40px] overflow-hidden border border-white/10 group mb-10 lg:mb-0">
+              <div className="relative rounded-[48px] overflow-hidden border border-white/10 group mb-10 lg:mb-0 shadow-2xl">
                 <VisualImage 
                   src={siteImages.gridDiff} 
                   alt="High standard cleaning" 
-                  className="w-full aspect-[4/3] group-hover:scale-105 transition-transform duration-700 opacity-60"
+                  className="w-full aspect-[4/3] group-hover:scale-110 transition-transform duration-1000 opacity-60"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f12] to-transparent" />
-                <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
-                  {['Lisboa', 'Sintra', 'Cascais', 'Loures', 'Odivelas'].map(area => (
-                    <div key={area} className="px-3 py-1.5 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:text-brand-secondary transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-brand-darker/20 to-transparent" />
+                <div className="absolute bottom-10 left-10 flex flex-wrap gap-3">
+                  {['Portugal', 'Angola', 'Lisboa', 'Luanda'].map(area => (
+                    <div key={area} className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:bg-brand-primary hover:border-brand-primary transition-all duration-300">
                       {area}
                     </div>
                   ))}
@@ -127,23 +125,40 @@ export function WhyChooseUs() {
               </div>
            </div>
 
-           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-8">
               {reasons.map((item, i) => (
                 <motion.div 
                   key={i}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white/5 border border-white/10 p-8 rounded-[32px] hover:bg-white/10 transition-all group"
+                  className="premium-card p-10 group"
                 >
-                  <div className="text-brand-secondary mb-4 group-hover:scale-110 transition-transform">
+                  <div className="text-brand-primary mb-6 group-hover:scale-110 group-hover:text-white transition-all duration-500 bg-white/5 w-14 h-14 rounded-2xl flex items-center justify-center">
                     {item.icon}
                   </div>
-                  <h4 className="text-lg font-bold mb-2 text-white">{item.title}</h4>
+                  <h4 className="text-xl font-bold mb-4 text-white group-hover:text-brand-primary transition-colors">{item.title}</h4>
                   <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
+              
+              <div className="sm:col-span-2 mt-8">
+                <a 
+                  href={companyData.contact.whatsappLink}
+                  className="flex items-center justify-between bg-white/5 border border-white/10 p-8 rounded-[32px] group hover:border-brand-primary/50 transition-all"
+                >
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 bg-brand-primary rounded-2xl flex items-center justify-center text-white shadow-teal">
+                      <MessageSquare size={32} />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-xl">Dúvidas?</h4>
+                      <p className="text-slate-400 text-sm">Fale connosco agora pelo WhatsApp</p>
+                    </div>
+                  </div>
+                  <ArrowRight size={32} className="text-brand-primary group-hover:translate-x-2 transition-transform" />
+                </a>
+              </div>
            </div>
          </div>
        </div>
