@@ -20,7 +20,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {companyData.team.map((member, index) => (
             <motion.div
               key={member.name}
@@ -28,9 +28,9 @@ const Team = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="premium-card p-10 flex flex-col md:flex-row gap-8 items-center md:items-start group"
+              className="premium-card p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center md:items-start group"
             >
-              <div className="w-48 h-48 rounded-[32px] overflow-hidden flex-shrink-0 border-4 border-white/5 group-hover:border-brand-primary/30 transition-all duration-500">
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-[32px] overflow-hidden flex-shrink-0 border-4 border-white/5 group-hover:border-brand-primary/30 transition-all duration-500">
                 <VisualImage 
                   src={member.image} 
                   alt={member.name} 
@@ -43,8 +43,8 @@ const Team = () => {
                   <BadgeCheck size={14} />
                   {member.role}
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">{member.name}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">{member.name}</h3>
+                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
                   {member.description}
                 </p>
                 
@@ -61,11 +61,15 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Corporate Note */}
-        <div className="mt-24 max-w-3xl mx-auto text-center glass p-8 md:p-12 rounded-[40px] border-brand-primary/10">
-          <h4 className="text-white font-bold text-xl mb-4">Compromisso Corporativo</h4>
-          <p className="text-slate-400 text-sm leading-relaxed">
-            A nossa equipa é formada por profissionais com formação específica em técnicas de limpeza avançada, garantindo não só a estética mas também a higienização profunda de cada espaço. Seguimos rigorosos protocolos de segurança e qualidade.
+        {/* Honest Notice & Corporate Note */}
+        <div className="mt-16 md:mt-24 max-w-3xl mx-auto text-center glass p-6 md:p-12 rounded-[32px] md:rounded-[40px] border-brand-primary/10">
+          <h4 className="text-white font-bold text-lg md:text-xl mb-4">Apresentação da Equipa</h4>
+          <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-4">
+            <span className="text-brand-primary font-bold">Nota:</span> Esta secção encontra-se estruturada para receber as informações oficiais. As fotografias e perfis reais dos membros da equipa Infinity Clean serão atualizados brevemente, após o fornecimento dos dados pela direção da empresa.
+          </p>
+          <div className="w-16 h-px bg-white/10 mx-auto my-6" />
+          <p className="text-slate-500 text-[10px] md:text-xs leading-relaxed uppercase tracking-widest">
+            Compromisso com o rigor, qualidade e excelência em Portugal e Angola.
           </p>
         </div>
       </div>

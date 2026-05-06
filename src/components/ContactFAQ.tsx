@@ -77,7 +77,7 @@ export const ContactForm = () => {
                     type="text" 
                     required
                     placeholder="Ex: João Silva"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 md:p-5 text-[16px] text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
                     onChange={(e) => setFormData({...formData, nome: e.target.value})}
                   />
                 </div>
@@ -87,7 +87,7 @@ export const ContactForm = () => {
                     type="tel" 
                     required
                     placeholder="Ex: 926 XXX XXX"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 md:p-5 text-[16px] text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
                     onChange={(e) => setFormData({...formData, telefone: e.target.value})}
                   />
                 </div>
@@ -98,7 +98,7 @@ export const ContactForm = () => {
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-2">Tipo de Serviço</label>
                   <select 
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:outline-none focus:border-brand-primary transition-all appearance-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 md:p-5 text-[16px] text-white focus:outline-none focus:border-brand-primary transition-all appearance-none"
                     onChange={(e) => setFormData({...formData, servico: e.target.value})}
                   >
                     <option value="" className="bg-brand-dark">Selecionar serviço</option>
@@ -111,7 +111,7 @@ export const ContactForm = () => {
                     type="text" 
                     required
                     placeholder="Ex: Lisboa ou Luanda"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 md:p-5 text-[16px] text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
                     onChange={(e) => setFormData({...formData, localizacao: e.target.value})}
                   />
                 </div>
@@ -122,7 +122,7 @@ export const ContactForm = () => {
                 <textarea 
                   rows={4}
                   placeholder="Conte-nos um pouco mais sobre o que precisa..."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 md:p-5 text-[16px] text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary transition-all"
                   onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
                 ></textarea>
               </div>

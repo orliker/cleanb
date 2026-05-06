@@ -27,33 +27,33 @@ const Hero = () => {
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light">Portugal & Angola</span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9] mb-8">
+            <h1 className="font-display text-[clamp(2.5rem,8vw,5rem)] font-bold text-white tracking-tighter leading-[1.1] mb-6">
               Limpezas <span className="text-gradient-teal italic">profissionais</span> em Portugal e Angola.
             </h1>
 
-            <p className="text-slate-400 text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
+            <p className="text-slate-400 text-base md:text-xl max-w-xl mb-10 leading-relaxed">
               {companyData.description} Especialistas em Luanda e nas principais zonas de Portugal.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
               <a 
                 href={companyData.contact.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-brand-primary text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-teal hover:bg-brand-secondary active:scale-95 transition-all flex items-center justify-center gap-3"
+                className="w-full sm:w-auto bg-brand-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg shadow-teal hover:bg-brand-secondary active:scale-95 transition-all flex items-center justify-center gap-3"
               >
                 Pedir orçamento
                 <ArrowRight size={20} />
               </a>
               <a 
                 href="#portfolio"
-                className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3"
+                className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3"
               >
                 Ver portfólio
               </a>
             </div>
 
-            <div className="mt-16 grid grid-cols-3 gap-8 border-t border-white/5 pt-12">
+            <div className="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 border-t border-white/5 pt-8 md:pt-12">
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white mb-1">100%</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Confiança</span>

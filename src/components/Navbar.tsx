@@ -28,22 +28,25 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'py-4' : 'py-8'
+        scrolled ? 'py-2 md:py-4' : 'py-4 md:py-8'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div 
-          className={`flex items-center justify-between transition-all duration-500 rounded-3xl px-6 ${
-            scrolled ? 'glass-dark py-3 shadow-premium' : 'bg-transparent py-0'
+          className={`flex items-center justify-between transition-all duration-500 rounded-2xl md:rounded-3xl px-4 md:px-6 ${
+            scrolled ? 'glass-dark py-2 md:py-3 shadow-premium' : 'bg-transparent py-0'
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex flex-col group">
+          <a href="#" className="flex flex-col items-center group">
             <img 
               src={companyData.logo} 
               alt={companyData.name} 
-              className="h-12 w-auto object-contain rounded-md group-hover:opacity-80 transition-opacity"
+              className="h-8 md:h-12 w-auto object-contain rounded-md group-hover:opacity-80 transition-opacity"
             />
+            <span className="text-[7px] md:text-[9px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-brand-primary uppercase mt-1">
+              Portugal & Angola
+            </span>
           </a>
 
           {/* Desktop Links */}
@@ -66,7 +69,7 @@ const Navbar = () => {
               href={companyData.contact.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-teal hover:bg-brand-secondary active:scale-95 transition-all"
+              className="flex items-center gap-2 bg-brand-primary text-white px-6 py-2.5 md:py-3 rounded-xl md:rounded-2xl font-bold text-xs uppercase tracking-widest shadow-teal hover:bg-brand-secondary active:scale-95 transition-all"
             >
               <MessageCircle size={16} />
               Orçamento
@@ -75,10 +78,10 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-1"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -90,14 +93,14 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-brand-dark border-b border-white/10 overflow-hidden"
+            className="lg:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 overflow-hidden shadow-2xl"
           >
-            <div className="px-6 py-12 flex flex-col gap-8">
+            <div className="px-6 py-8 flex flex-col gap-6">
               {navLinks.map((link) => (
                 <a 
                   key={link.name} 
                   href={link.href}
-                  className="text-2xl font-display font-bold text-white hover:text-brand-primary transition-colors"
+                  className="text-xl font-display font-bold text-white hover:text-brand-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -105,10 +108,10 @@ const Navbar = () => {
               ))}
               <a 
                 href={companyData.contact.whatsappLink}
-                className="flex items-center justify-center gap-3 bg-brand-primary text-white py-5 rounded-2xl font-bold text-lg shadow-teal"
+                className="flex items-center justify-center gap-2 bg-brand-primary text-white py-4 mt-2 rounded-xl font-bold text-base shadow-teal"
                 onClick={() => setIsOpen(false)}
               >
-                <MessageCircle size={24} />
+                <MessageCircle size={20} />
                 WhatsApp Orçamento
               </a>
             </div>

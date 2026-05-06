@@ -18,10 +18,10 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="section-padding bg-brand-dark">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-16 gap-6 md:gap-8">
           <div className="max-w-2xl">
-            <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">Portfólio de Trabalhos</span>
-            <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
+            <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Portfólio de Trabalhos</span>
+            <h2 className="font-display text-[clamp(2rem,7vw,4rem)] md:text-6xl font-bold mt-2 md:mt-4 text-white tracking-tighter leading-tight">
               Resultados <span className="text-gradient-teal italic">impecáveis</span> em cada projeto.
             </h2>
           </div>
@@ -32,7 +32,7 @@ const Portfolio = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
+                className={`px-4 py-1.5 md:px-6 md:py-2 rounded-full text-[9px] md:text-xs font-bold uppercase tracking-widest transition-all ${
                   activeCategory === cat 
                   ? 'bg-brand-primary text-white shadow-teal' 
                   : 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white'
@@ -44,7 +44,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item, index) => (
               <motion.div
@@ -54,7 +54,7 @@ const Portfolio = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5 }}
-                className="group relative aspect-[4/3] rounded-[32px] overflow-hidden cursor-pointer"
+                className="group relative aspect-video sm:aspect-[4/3] rounded-[24px] md:rounded-[32px] overflow-hidden cursor-pointer"
               >
                 <VisualImage 
                   src={item.image} 
