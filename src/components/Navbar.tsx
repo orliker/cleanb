@@ -38,15 +38,17 @@ const Navbar = () => {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex flex-col items-center group">
-            <img 
-              src={companyData.logo} 
-              alt={companyData.name} 
-              className="h-8 md:h-12 w-auto object-contain rounded-md group-hover:opacity-80 transition-opacity"
-            />
-            <span className="text-[7px] md:text-[9px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-brand-primary uppercase mt-1">
-              Portugal & Angola
-            </span>
+          <a href="#" className="flex flex-col items-center group py-1">
+            <div className="flex flex-col items-center">
+              <img 
+                src={companyData.logo} 
+                alt={companyData.name} 
+                className="h-7 md:h-10 w-auto object-contain rounded-sm group-hover:opacity-80 transition-opacity"
+              />
+              <span className="text-[6px] md:text-[8px] font-bold tracking-[0.25em] md:tracking-[0.4em] text-brand-primary uppercase mt-0.5 whitespace-nowrap">
+                Portugal & Angola
+              </span>
+            </div>
           </a>
 
           {/* Desktop Links */}

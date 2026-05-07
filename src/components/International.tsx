@@ -56,9 +56,9 @@ const International = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] md:w-[110%] max-w-[1000px] pointer-events-none z-[1] hidden md:block"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] md:w-[100%] max-w-[1000px] pointer-events-none z-[1] hidden md:block"
           >
-            <svg viewBox="0 0 800 300" className="w-full h-auto drop-shadow-2xl">
+            <svg viewBox="0 0 800 300" className="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
               <motion.path
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
@@ -66,11 +66,11 @@ const International = () => {
                 transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
                 d="M200,150 C200,70 320,70 400,150 C480,230 600,230 600,150 C600,70 480,70 400,150 C320,230 200,230 200,150"
                 fill="none"
-                stroke="rgba(255, 255, 255, 0.9)"
-                strokeWidth="6"
+                stroke="white"
+                strokeWidth="5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ filter: "drop-shadow(0 0 12px rgba(255,255,255,0.3))" }}
+                opacity="0.8"
               />
             </svg>
           </motion.div>

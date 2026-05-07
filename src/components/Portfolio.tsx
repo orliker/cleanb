@@ -63,26 +63,33 @@ const Portfolio = () => {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 md:p-8">
-                  <div className="flex items-center gap-2 text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-2">
-                    <MapPin size={12} />
-                    {item.location}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-5 md:p-8">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2 text-brand-primary text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em]">
+                      <MapPin size={12} />
+                      {item.location}
+                    </div>
+                    {item.isPlaceholder && (
+                      <span className="text-[7px] md:text-[8px] font-bold text-white/40 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">
+                        Imagem Ilustrativa
+                      </span>
+                    )}
                   </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight">{item.title}</h4>
-                  <p className="text-slate-300 text-xs md:text-sm mb-6 line-clamp-2">
+                  <h4 className="text-lg md:text-2xl font-bold text-white mb-2 leading-tight">{item.title}</h4>
+                  <p className="text-slate-300 text-[10px] md:text-sm mb-4 md:mb-6 line-clamp-2">
                     {item.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="bg-white/10 px-4 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest backdrop-blur-sm">
+                    <span className="bg-white/10 px-3 py-1 rounded-full text-[8px] md:text-[10px] font-bold text-white uppercase tracking-widest backdrop-blur-sm">
                       {item.category}
                     </span>
                     <a 
                       href={companyData.contact.whatsappLink} 
-                      className="bg-brand-primary hover:bg-brand-secondary text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-colors shadow-teal flex items-center gap-2"
+                      className="bg-brand-primary hover:bg-brand-secondary text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg md:rounded-xl text-[9px] md:text-xs font-bold uppercase tracking-widest transition-colors shadow-teal flex items-center gap-2"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Orçamento
-                      <ArrowUpRight size={16} />
+                      <ArrowUpRight size={14} />
                     </a>
                   </div>
                 </div>

@@ -28,9 +28,9 @@ const Team = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="premium-card p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center md:items-start group"
+              className="premium-card p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start group"
             >
-              <div className="w-40 h-40 md:w-48 md:h-48 rounded-[32px] overflow-hidden flex-shrink-0 border-4 border-white/5 group-hover:border-brand-primary/30 transition-all duration-500">
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl md:rounded-[32px] overflow-hidden flex-shrink-0 border-4 border-white/5 group-hover:border-brand-primary/30 transition-all duration-500">
                 <VisualImage 
                   src={member.image} 
                   alt={member.name} 
@@ -39,21 +39,21 @@ const Team = () => {
               </div>
               
               <div className="flex-1 text-center md:text-left">
-                <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
+                <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-3 md:mb-4">
                   <BadgeCheck size={14} />
                   {member.role}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">{member.name}</h3>
-                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
+                <h3 className="text-xl md:text-3xl font-bold text-white mb-2 md:mb-3 tracking-tight">{member.name}</h3>
+                <p className="text-slate-400 text-[11px] md:text-sm leading-relaxed mb-4 md:mb-6">
                   {member.description}
                 </p>
                 
-                <div className="flex items-center justify-center md:justify-start gap-4">
-                  <a href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all">
-                    <Linkedin size={18} />
+                <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4">
+                  <a href="#" className="w-8 h-8 md:w-10 md:h-10 bg-white/5 rounded-lg md:rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all">
+                    <Linkedin size={16} />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all">
-                    <Mail size={18} />
+                  <a href="#" className="w-8 h-8 md:w-10 md:h-10 bg-white/5 rounded-lg md:rounded-xl flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition-all">
+                    <Mail size={16} />
                   </a>
                 </div>
               </div>

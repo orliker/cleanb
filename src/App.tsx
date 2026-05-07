@@ -38,13 +38,13 @@ export default function App() {
         <Hero />
         
         {/* Trust Bar */}
-        <div className="bg-brand-darker border-y border-white/5 py-12 px-6 overflow-hidden">
+        <div className="bg-brand-darker border-y border-white/5 py-8 md:py-12 px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <p className="text-center text-[10px] font-bold text-slate-500 uppercase tracking-[0.5em] mb-8">Especialistas em Portugal e Angola</p>
-            <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 text-[12px] font-bold uppercase tracking-[0.4em] text-slate-400">
+            <p className="text-center text-[8px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.5em] mb-6 md:mb-8">Especialistas em Portugal e Angola</p>
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-12 text-[9px] md:text-[12px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-slate-400">
                {['Lisboa', 'Cascais', 'Sintra', 'Luanda', 'Talatona', 'Kilamba'].map((city) => (
-                 <div key={city} className="flex items-center gap-3 hover:text-brand-primary transition-all duration-500 cursor-default group">
-                   <div className="w-1.5 h-1.5 bg-brand-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                 <div key={city} className="flex items-center gap-2 md:gap-3 hover:text-brand-primary transition-all duration-500 cursor-default group">
+                   <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-brand-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                    {city}
                  </div>
                ))}

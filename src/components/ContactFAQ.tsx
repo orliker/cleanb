@@ -24,40 +24,31 @@ export const ContactForm = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20">
           <div>
-            <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">Contacto Direto</span>
-            <h2 className="font-display text-5xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
+            <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Contacto Direto</span>
+            <h2 className="font-display text-[clamp(2.2rem,8vw,4.5rem)] font-bold mt-2 md:mt-4 text-white tracking-tighter leading-tight">
               Peça o seu <span className="text-gradient-teal italic">orçamento</span> grátis.
             </h2>
-            <p className="text-slate-400 text-lg mt-8 leading-relaxed">
+            <p className="text-slate-400 text-sm md:text-lg mt-6 md:mt-8 leading-relaxed">
               Estamos prontos para transformar o seu espaço. Preencha o formulário e a nossa equipa entrará em contacto via WhatsApp em poucos minutos.
             </p>
 
-            <div className="mt-12 space-y-8">
-              <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all">
-                  <Phone size={28} />
+            <div className="mt-8 md:mt-12 space-y-4 md:space-y-8">
+              <div className="flex items-center gap-4 md:gap-6 group">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all shrink-0">
+                  <Phone size={24} className="md:w-7 md:h-7" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Telefone / WhatsApp</p>
-                  <p className="text-white text-xl font-bold">+{companyData.contact.whatsapp}</p>
+                  <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-0.5 md:mb-1">Telefone / WhatsApp</p>
+                  <p className="text-white text-base md:text-xl font-bold">+{companyData.contact.whatsapp}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all">
-                  <Instagram size={28} />
+              <div className="flex items-center gap-4 md:gap-6 group">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all shrink-0">
+                  <Instagram size={24} className="md:w-7 md:h-7" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Instagram</p>
-                  <p className="text-white text-xl font-bold">{companyData.contact.instagramUser}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6 group">
-                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all">
-                  <Globe size={28} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Países</p>
-                  <p className="text-white text-xl font-bold">Portugal & Angola</p>
+                  <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-0.5 md:mb-1">Instagram</p>
+                  <p className="text-white text-base md:text-xl font-bold">{companyData.contact.instagramUser}</p>
                 </div>
               </div>
             </div>
@@ -197,22 +188,25 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="lg:col-span-2">
-            <a href="#" className="flex flex-col mb-8">
+            <a href="#" className="flex flex-col mb-6 md:mb-8">
               <img 
                 src={companyData.logo} 
                 alt={companyData.name} 
-                className="h-16 w-auto object-contain rounded-md hover:opacity-80 transition-opacity self-start"
+                className="h-10 md:h-16 w-auto object-contain rounded-md hover:opacity-80 transition-opacity self-start"
               />
+              <span className="text-[7px] md:text-[10px] font-bold tracking-[0.3em] text-brand-primary uppercase mt-1">
+                Portugal & Angola
+              </span>
             </a>
-            <p className="text-slate-500 text-sm max-w-md leading-relaxed mb-8">
-              Uma marca angolana e portuguesa de serviços de limpeza profissional. Elevamos o padrão de higiene e organização em residências e empresas.
+            <p className="text-slate-500 text-xs md:text-sm max-w-md leading-relaxed mb-6 md:mb-8">
+              Uma marca angolana e portuguesa dedicada a serviços de limpeza profissional. Elevamos o padrão de higiene e organização em residências e empresas, com atuação em Portugal e foco estratégico em Luanda.
             </p>
             <div className="flex gap-4">
-              <a href={companyData.contact.instagram} className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
-                <Instagram size={24} />
+              <a href={companyData.contact.instagram} className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
+                <Instagram size={20} className="md:w-6 md:h-6" />
               </a>
-              <a href={companyData.contact.whatsappLink} className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
-                <MessageCircle size={24} />
+              <a href={companyData.contact.whatsappLink} className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
+                <MessageCircle size={20} className="md:w-6 md:h-6" />
               </a>
             </div>
           </div>

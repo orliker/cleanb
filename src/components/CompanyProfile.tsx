@@ -15,21 +15,21 @@ const CompanyProfile = () => {
             viewport={{ once: true }}
           >
             <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Sobre Nós</span>
-            <h2 className="font-display text-[clamp(2.5rem,8vw,4.5rem)] font-bold mt-2 md:mt-4 text-white tracking-tighter leading-tight">
+            <h2 className="font-display text-[clamp(2.2rem,8vw,4.5rem)] font-bold mt-2 md:mt-4 text-white tracking-tighter leading-tight">
               Uma marca com <span className="text-gradient-teal italic">visão</span> global.
             </h2>
             <p className="text-slate-400 text-sm md:text-xl mt-6 md:mt-8 leading-relaxed">
-              {companyData.description}
+              Somos uma marca angolana e portuguesa criada para oferecer soluções de limpeza profissionais, modernas e adaptadas às necessidades de cada cliente. Atuamos em Portugal e estamos também a expandir os nossos serviços em Angola, especialmente na cidade de Luanda.
             </p>
             <p className="text-slate-400 text-sm md:text-lg mt-4 md:mt-6 leading-relaxed">
               A nossa missão é transformar espaços através de um serviço organizado, responsável e atento ao detalhe, garantindo conforto, higiene e confiança em cada trabalho realizado.
             </p>
-            
-            <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12">
-              {['Confiança', 'Qualidade', 'Pontualidade', 'Organização'].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-white font-bold text-xs md:text-base">
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-primary/10 rounded-lg md:rounded-xl flex items-center justify-center text-brand-primary shrink-0">
-                    <CheckCircle2 size={16} className="md:w-5 md:h-5" />
+
+            <div className="grid grid-cols-2 gap-3 md:gap-6 mt-8 md:mt-12">
+              {['Confiança', 'Qualidade', 'Pontualidade', 'Organização', 'Profissionalismo', 'Atenção ao detalhe'].map((item) => (
+                <div key={item} className="flex items-center gap-2 md:gap-3 text-white font-bold text-[10px] md:text-base">
+                  <div className="w-6 h-6 md:w-10 md:h-10 bg-brand-primary/10 rounded-lg md:rounded-xl flex items-center justify-center text-brand-primary shrink-0">
+                    <CheckCircle2 size={14} className="md:w-5 md:h-5" />
                   </div>
                   {item}
                 </div>
