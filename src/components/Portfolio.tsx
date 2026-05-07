@@ -4,7 +4,7 @@ import { Camera, MapPin, Search, ArrowUpRight } from 'lucide-react';
 import { companyData } from '../data/companyData';
 import { VisualImage } from './VisualImage';
 
-const categories = ['Todos', 'Residencial', 'Escritórios', 'Empresas', 'Pós-obra', 'Luanda', 'Portugal'];
+const categories = ['Todos', 'Residencial', 'Casas de banho', 'Cozinha', 'Limpeza profunda', 'Resultado final', 'Portugal'];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('Todos');
@@ -58,7 +58,7 @@ const Portfolio = () => {
               >
                 <VisualImage 
                   src={item.image} 
-                  alt={item.title} 
+                  alt={item.alt || item.title} 
                   className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
                 />
                 
@@ -69,11 +69,6 @@ const Portfolio = () => {
                       <MapPin size={12} />
                       {item.location}
                     </div>
-                    {item.isPlaceholder && (
-                      <span className="text-[7px] md:text-[8px] font-bold text-white/40 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">
-                        Imagem Ilustrativa
-                      </span>
-                    )}
                   </div>
                   <h4 className="text-lg md:text-2xl font-bold text-white mb-2 leading-tight">{item.title}</h4>
                   <p className="text-slate-300 text-[10px] md:text-sm mb-4 md:mb-6 line-clamp-2">
@@ -100,10 +95,7 @@ const Portfolio = () => {
 
         <div className="mt-20 max-w-2xl mx-auto text-center glass p-6 rounded-3xl border-white/5">
           <p className="text-slate-400 text-sm">
-            <span className="font-bold text-white block mb-2">Nota:</span>
-            Galeria ilustrativa preparada para apresentar a excelência dos serviços Infinity Clean. 
-            As fotografias reais dos projetos em Portugal e Angola serão adicionadas em breve, 
-            após compilação do material fotográfico oficial do cliente.
+            Alguns exemplos visuais de limpezas e resultados apresentados pela Infinity Clean.
           </p>
         </div>
       </div>

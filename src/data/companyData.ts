@@ -90,68 +90,71 @@ export const companyData = {
   logo: "/images/logo/logo.jpg",
   portfolio: [
     {
-      title: "Limpeza Residencial Completa",
+      title: "Banheira restaurada",
       category: "Residencial",
       location: "Portugal",
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
-      description: "Espaço preparado para apresentar fotografias reais de limpezas residenciais realizadas pela equipa.",
-      isPlaceholder: true
+      image: "/images/portafolio/bathroom-tub-mold-removal-before-after.png",
+      description: "Remoção profunda de sujidade acumulada e recuperação do brilho original da superfície.",
+      alt: "Antes e depois de limpeza profunda numa banheira com remoção de sujidade acumulada."
     },
     {
-      title: "Limpeza de Escritórios",
-      category: "Escritórios",
+      title: "Vidro de duche limpo",
+      category: "Casas de banho",
       location: "Portugal",
-      image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
-      description: "Exemplo de higienização de ambientes corporativos. Fotos reais em breve.",
-      isPlaceholder: true
+      image: "/images/portafolio/shower-glass-cleaning-before-after.png",
+      description: "Limpeza detalhada de vidro de duche, removendo marcas de água, calcário e resíduos.",
+      alt: "Antes e depois de limpeza de vidro de duche com remoção de manchas de água."
     },
     {
-      title: "Limpeza Empresarial",
-      category: "Empresarial",
-      location: "Angola",
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
-      description: "Manutenção de espaços comerciais. Galeria aguarda material fotográfico real.",
-      isPlaceholder: true
-    },
-    {
-      title: "Limpeza Pós-Obra",
-      category: "Pós-Obra",
+      title: "Torneira polida",
+      category: "Casas de banho",
       location: "Portugal",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
-      description: "Intervenção profunda após remodelação. Espaço para fotos reais do projeto.",
-      isPlaceholder: true
+      image: "/images/portafolio/chrome-faucet-polishing-before-after.png",
+      description: "Polimento de torneira cromada com remoção de calcário e manchas de água.",
+      alt: "Antes e depois de torneira cromada limpa e polida."
     },
     {
-      title: "Limpeza Profunda",
-      category: "Profunda",
+      title: "Interior de armário",
+      category: "Limpeza profunda",
       location: "Portugal",
-      image: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80",
-      description: "Higienização minuciosa. Fotografias reais serão adicionadas brevemente.",
-      isPlaceholder: true
+      image: "/images/portafolio/cabinet-interior-cleaning-before-after.png",
+      description: "Limpeza interior de armário com remoção de resíduos, manchas e sujidade acumulada.",
+      alt: "Antes e depois de limpeza profunda no interior de um armário."
     },
     {
-      title: "Serviços em Luanda",
-      category: "Luanda",
-      location: "Luanda, Angola",
-      image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80",
-      description: "Atuação em Luanda. Preparado para receber registos fotográficos locais.",
-      isPlaceholder: true
+      title: "Vidro de forno",
+      category: "Cozinha",
+      location: "Portugal",
+      image: "/images/portafolio/oven-glass-cleaning-before-after.png",
+      description: "Remoção de gordura acumulada em vidro de forno, devolvendo transparência e brilho.",
+      alt: "Antes e depois de limpeza de vidro de forno com gordura acumulada."
+    },
+    {
+      title: "Interior de frigorífico",
+      category: "Cozinha",
+      location: "Portugal",
+      image: "/images/portafolio/fridge-interior-cleaning-before-after.png",
+      description: "Limpeza e higienização de frigorífico, removendo manchas e resíduos alimentares.",
+      alt: "Antes e depois de limpeza interior de frigorífico."
+    },
+    {
+      title: "Resultado premium em casa de banho",
+      category: "Resultado final",
+      location: "Portugal",
+      image: "/images/portafolio/luxury-shower-result.png",
+      description: "Exemplo visual de acabamento limpo, cuidado e profissional em casa de banho.",
+      alt: "Casa de banho moderna limpa com vidro de duche e acabamento premium."
     }
   ],
   team: [
     {
-      name: "Nome do Membro",
+      name: "Fanini Muamungo",
       role: "CEO / Fundador",
-      description: "Breve descrição profissional sobre a função deste membro no projeto Infinity Clean.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
-      isPlaceholder: true
-    },
-    {
-      name: "Nome do Membro",
-      role: "Gestão Operacional",
-      description: "Breve descrição sobre a responsabilidade deste membro na coordenação da empresa.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-      isPlaceholder: true
+      description: "Técnico de Lapidação de Diamantes e Analista de Cibersegurança, Fanini Muamungo assume a liderança da Infinity Clean com foco em organização, profissionalismo e visão estratégica para Portugal e Angola.",
+      image: "/images/equipa/fanini-muamungo-ceo.jpg",
+      contact: "+351 926 114 896",
+      email: "mario.fanis55@gmail.com",
+      instagram: "https://www.instagram.com/___faninimario"
     }
   ],
   digitalPresence: [
