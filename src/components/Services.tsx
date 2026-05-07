@@ -12,7 +12,8 @@ import {
   ArrowRight,
   Calendar,
   Layout,
-  Map
+  Map,
+  Car
 } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
@@ -26,7 +27,8 @@ const iconMap: Record<string, React.ReactNode> = {
   MapPin: <MapPin size={28} />,
   Calendar: <Calendar size={28} />,
   Layout: <Layout size={28} />,
-  Map: <Map size={28} />
+  Map: <Map size={28} />,
+  Car: <Car size={28} />
 };
 
 const Services = () => {
@@ -71,8 +73,10 @@ const Services = () => {
               </p>
 
               <a 
-                href={companyData.contact.whatsappLink}
+                href={`https://wa.me/351926114896?text=${encodeURIComponent(service.id === 'automotiva' ? 'Olá, gostaria de pedir um orçamento para limpeza automotiva.' : `Olá, gostaria de pedir um orçamento para ${service.title.toLowerCase()}.`)}`}
                 className="inline-flex items-center gap-2 text-[9px] md:text-xs font-bold uppercase tracking-widest text-brand-primary group-hover:gap-3 transition-all mt-auto"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Solicitar orçamento
                 <ArrowRight size={14} />

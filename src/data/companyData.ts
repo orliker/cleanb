@@ -75,6 +75,12 @@ export const companyData = {
       icon: "Layout"
     },
     {
+      id: "automotiva",
+      title: "Limpeza Automotiva",
+      description: "Serviço de limpeza e higienização para automóveis, com atenção ao detalhe no interior, estofos, painéis, tapetes e acabamentos.",
+      icon: "Car"
+    },
+    {
       id: "portugal",
       title: "Limpeza em Portugal",
       description: "Serviços de excelência em território português, com foco na região de Lisboa e arredores.",
