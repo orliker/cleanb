@@ -1,141 +1,95 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Globe } from 'lucide-react';
 import { companyData } from '../data/companyData';
-import { VisualImage } from './VisualImage';
+
+const collageImages = [
+  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80", // Restaurantes
+  "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=400&q=80", // Barberías
+  "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=400&q=80", // Clínicas
+  "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80", // Limpieza
+  "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80", // Café
+  "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=80", // Oficina
+  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80", // Business
+  "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=400&q=80", // Cocina
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80", // Corporate
+  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80", // Tech/Web
+  "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80", // Profesional
+  "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80", // Limpieza 2
+  "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=400&q=80", // Airbnb
+  "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=400&q=80", // Concesionarios
+  "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=400&q=80", // Condominio
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80"  // Pós-obra
+];
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-20 overflow-hidden bg-brand-dark">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-[10%] -right-[10%] w-[60%] h-[60%] bg-brand-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
-        <div className="absolute -bottom-[10%] -left-[10%] w-[50%] h-[50%] bg-brand-secondary/5 rounded-full blur-[100px]" />
+    <section id="inicio" className="relative min-h-[100vh] flex items-center justify-center pt-24 md:pt-20 overflow-hidden bg-brand-dark">
+      
+      {/* Background Editorial Collage */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] md:w-[120%] h-[150%] md:h-[120%] -rotate-6 scale-[1.15] opacity-30 md:opacity-40">
+          <div className="grid grid-cols-4 md:grid-cols-6 gap-2 md:gap-4 w-full h-full">
+            {collageImages.map((src, i) => (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.05, duration: 1, ease: "easeOut" }}
+                className="relative aspect-square md:aspect-[3/4] rounded-xl md:rounded-3xl overflow-hidden shadow-2xl"
+              >
+                <img src={src} className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700" alt="Editorial moodboard" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-          
-          {/* Left Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center lg:text-left"
-          >
-            <div className="inline-flex items-center gap-2 md:gap-3 bg-white/5 border border-white/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-6 md:mb-8">
-              <Globe size={14} className="text-brand-primary animate-pulse" />
-              <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light">Portugal & Angola</span>
-            </div>
+      {/* Legibility Mask & Overlays */}
+      <div className="absolute inset-0 bg-brand-dark/50 backdrop-blur-[2px] z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-brand-dark/20 z-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(10,25,47,0.85)_0%,rgba(10,25,47,0)_70%)] z-10 pointer-events-none" />
 
-            <h1 className="font-display text-[clamp(2.2rem,10vw,5rem)] font-bold text-white tracking-tighter leading-[1.1] mb-6">
-              Limpezas <span className="text-gradient-teal italic">profissionais</span> em Portugal e Angola.
-            </h1>
+      {/* Main Content */}
+      <div className="max-w-5xl mx-auto px-6 relative z-20 w-full text-center flex flex-col items-center justify-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="flex flex-col items-center"
+        >
+          <div className="inline-flex items-center gap-2 md:gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-4 md:px-5 py-2 md:py-2.5 rounded-full mb-6 md:mb-10 shadow-xl">
+            <Globe size={14} className="text-brand-primary animate-pulse" />
+            <span className="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.25em] text-white">Portugal & Angola</span>
+          </div>
 
-            <p className="text-slate-400 text-sm md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 md:mb-10 leading-relaxed">
-              Uma marca angolana e portuguesa dedicada a oferecer serviços de limpeza modernos, organizados e de confiança para casas, empresas, escritórios e espaços comerciais.
-              <span className="block mt-4 text-brand-primary font-bold text-xs md:text-sm uppercase tracking-widest">Especialistas em Portugal e em Luanda, Angola.</span>
-            </p>
+          <h1 className="font-serif text-[clamp(2.8rem,11vw,6.5rem)] font-bold text-white tracking-tight leading-[1.05] mb-6 md:mb-8 drop-shadow-2xl">
+            Limpezas que marcam a <span className="text-brand-primary italic font-light drop-shadow-[0_0_15px_rgba(0,128,128,0.5)]">diferença.</span>
+          </h1>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a 
-                href={companyData.contact.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-brand-primary text-white px-8 md:px-10 py-3.5 md:py-5 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg shadow-teal hover:bg-brand-secondary active:scale-95 transition-all flex items-center justify-center gap-3"
-              >
-                Pedir orçamento
-                <ArrowRight size={18} />
-              </a>
-              <a 
-                href="#portfolio"
-                className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-8 md:px-10 py-3.5 md:py-5 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3"
-              >
-                Ver portfólio
-              </a>
-            </div>
+          <p className="text-slate-300 text-sm md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed drop-shadow-md">
+            Criamos espaços impecáveis para restaurantes, escritórios, clínicas e negócios locais.
+            <span className="block mt-4 text-white font-bold text-[10px] md:text-xs uppercase tracking-widest bg-brand-dark/50 inline-block px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">Especialistas em Portugal e Luanda</span>
+          </p>
 
-            <div className="mt-10 md:mt-16 grid grid-cols-3 gap-2 md:gap-8 border-t border-white/5 pt-8 md:pt-12">
-              <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold text-white mb-1">100%</span>
-                <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500">Confiança</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold text-white mb-1">2+</span>
-                <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500">Países</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold text-white mb-1">24/7</span>
-                <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500">Suporte</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Visual */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative aspect-square md:aspect-[4/5] rounded-[48px] overflow-hidden border border-white/10 shadow-2xl">
-              <VisualImage 
-                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80"
-                alt="Cleaning Professional"
-                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000 scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating Cards */}
-            <motion.div 
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-10 -right-10 glass p-6 rounded-3xl shadow-premium"
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <a 
+              href={companyData.contact.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-brand-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg shadow-teal hover:bg-brand-secondary active:scale-95 transition-all flex items-center justify-center gap-3 backdrop-blur-sm"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-primary/20 rounded-2xl flex items-center justify-center text-brand-primary">
-                  <ShieldCheck size={28} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Qualidade Garantida</p>
-                  <p className="text-white font-bold">Serviço Premium</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              animate={{ y: [0, 20, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-10 -left-10 glass p-6 rounded-3xl shadow-premium"
+              Pedir orçamento
+              <ArrowRight size={18} />
+            </a>
+            <a 
+              href="#portfolio"
+              className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-3 shadow-xl"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-secondary/20 rounded-2xl flex items-center justify-center text-brand-secondary">
-                  <Sparkles size={28} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Equipa Especializada</p>
-                  <p className="text-white font-bold">Resultados Impecáveis</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Mobile Visual (Simplified) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden relative aspect-video rounded-3xl overflow-hidden border border-white/10"
-          >
-            <VisualImage 
-              src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80"
-              alt="Cleaning Professional"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
-          </motion.div>
-
-        </div>
+              Ver portfólio
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
