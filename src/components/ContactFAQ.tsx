@@ -51,6 +51,18 @@ export const ContactForm = () => {
                   <p className="text-white text-base md:text-xl font-bold">{companyData.contact.instagramUser}</p>
                 </div>
               </div>
+              <a
+                href={`mailto:${companyData.contact.email}`}
+                className="flex items-center gap-4 md:gap-6 group"
+              >
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all shrink-0">
+                  <Mail size={24} className="md:w-7 md:h-7" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-0.5 md:mb-1">Email profissional</p>
+                  <p className="text-white text-base md:text-xl font-bold break-all">{companyData.contact.email}</p>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -201,12 +213,27 @@ export const Footer = () => {
             <p className="text-slate-500 text-xs md:text-sm max-w-md leading-relaxed mb-6 md:mb-8">
               Uma marca angolana e portuguesa dedicada a serviços de limpeza profissional. Elevamos o padrão de higiene e organização em residências e empresas, com atuação em Portugal e foco estratégico em Luanda.
             </p>
+            <a
+              href={`mailto:${companyData.contact.email}`}
+              className="group mb-6 inline-flex max-w-full items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left transition-all hover:border-brand-primary/40 hover:bg-brand-primary/10"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-primary/15 text-brand-primary transition-all group-hover:bg-brand-primary group-hover:text-white">
+                <Mail size={20} />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-[9px] font-bold uppercase tracking-[0.25em] text-slate-500">Email profissional</span>
+                <span className="block break-all text-sm font-semibold text-white md:text-base">{companyData.contact.email}</span>
+              </span>
+            </a>
             <div className="flex gap-4">
-              <a href={companyData.contact.instagram} className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
+              <a href={companyData.contact.instagram} aria-label="Instagram" className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
                 <Instagram size={20} className="md:w-6 md:h-6" />
               </a>
-              <a href={companyData.contact.whatsappLink} className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
+              <a href={companyData.contact.whatsappLink} aria-label="WhatsApp" className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
                 <MessageCircle size={20} className="md:w-6 md:h-6" />
+              </a>
+              <a href={`mailto:${companyData.contact.email}`} aria-label="Email" className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary transition-all">
+                <Mail size={20} className="md:w-6 md:h-6" />
               </a>
             </div>
           </div>
