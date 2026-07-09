@@ -71,13 +71,13 @@ const Team = () => {
               </a>
 
               <a 
-                href="mailto:mario.fanis55@gmail.com" 
+                href="mailto:brightinfinity@gmail.com" 
                 className="flex items-center justify-start gap-3 w-full lg:w-auto px-5 py-3 md:px-6 md:py-4 bg-white/5 hover:bg-brand-primary rounded-xl text-white font-medium transition-all group/btn border border-white/5 hover:border-brand-primary shadow-lg min-w-[200px]"
               >
                 <Mail size={20} className="text-brand-primary group-hover/btn:text-white transition-colors flex-shrink-0" />
                 <div className="flex flex-col text-left">
                   <span className="text-[9px] md:text-[10px] text-slate-400 group-hover/btn:text-white/80 uppercase tracking-wider">Correio eletrónico</span>
-                  <span className="text-sm md:text-base font-semibold truncate max-w-[180px]">mario.fanis55@gmail.com</span>
+                  <span className="text-sm md:text-base font-semibold truncate max-w-[180px]">brightinfinity@gmail.com</span>
                 </div>
               </a>
 

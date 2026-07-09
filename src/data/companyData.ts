@@ -159,7 +159,7 @@ export const companyData = {
       description: "Técnico de Lapidação de Diamantes e Analista de Cibersegurança, Fanini Muamungo assume a liderança da Infinity Clean com foco em organização, profissionalismo e visão estratégica para Portugal e Angola.",
       image: "/images/equipa/fanini-muamungo-ceo.jpg",
       contact: "+351 926 114 896",
-      email: "mario.fanis55@gmail.com",
+      email: "brightinfinity@gmail.com",
       instagram: "https://www.instagram.com/___faninimario"
     }
   ],
