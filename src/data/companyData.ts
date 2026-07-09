@@ -19,7 +19,7 @@ export const companyData = {
     whatsappLink: "https://wa.me/351926114896",
     instagram: "https://www.instagram.com/infinity.bright_clean.pt/",
     instagramUser: "@infinity.bright_clean.pt",
-    email: "fmuamungo.brightinfinity@gmail.com",
+    email: "brightinfinity@gmail.com",
     locations: [
       { city: "Lisboa", country: "Portugal" },
       { city: "Luanda", country: "Angola", detail: "Toda a cidade de Luanda" }

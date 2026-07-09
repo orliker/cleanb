@@ -262,12 +262,27 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em]">
+          <p className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em] text-center md:text-left">
             © {new Date().getFullYear()} {companyData.name}. Todos os direitos reservados.
           </p>
-          <div className="flex items-center gap-8">
-            <a href="#" className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em] hover:text-white transition-colors">Termos de Uso</a>
-            <a href="#" className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em] hover:text-white transition-colors">Privacidade</a>
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <a 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              href="https://www.zaask.pt/user/fmuamungobrightinfinity" 
+              title="Casa Zaask"
+              className="opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+            >
+              <img 
+                src="https://www.zaask.pt/widget?user=1054648&widget=pro-since&color=white" 
+                alt="Fanini Mário Muamungo"
+                className="h-8 md:h-10 w-auto"
+              />
+            </a>
+            <div className="flex items-center gap-6 md:gap-8">
+              <a href="#" className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em] hover:text-white transition-colors">Termos de Uso</a>
+              <a href="#" className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em] hover:text-white transition-colors">Privacidade</a>
+            </div>
           </div>
         </div>
       </div>
