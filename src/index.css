@@ -6,8 +6,8 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-serif: "Playfair Display", serif;
   
-  --color-brand-primary: #008080; /* Teal/Aqua */
-  --color-brand-secondary: #20B2AA; /* Light Sea Green */
+  --color-brand-primary: #00D2FF; /* Cyan — paleta em produção */
+  --color-brand-secondary: #008080; /* Teal */
   --color-brand-dark: #0A192F; /* Deep Navy */
   --color-brand-darker: #050C16;
   --color-brand-card: rgba(255, 255, 255, 0.03);
