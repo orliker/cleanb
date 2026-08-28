@@ -19,7 +19,7 @@ const CompanyProfile = () => {
               Uma marca com <span className="text-gradient-teal italic">visão</span> global.
             </h2>
             <p className="text-slate-400 text-sm md:text-xl mt-6 md:mt-8 leading-relaxed">
-              Somos uma marca angolana e portuguesa criada para oferecer soluções de limpeza profissionais, modernas e adaptadas às necessidades de cada cliente. Atuamos em Portugal e estamos também a expandir os nossos serviços em Angola, especialmente na cidade de Luanda.
+              Somos uma marca angolana e portuguesa de remodelação e higienização. Fazemos a obra — demolição, pintura, pavimentos, reparações e acabamentos — e entregamos o espaço limpo e pronto a usar, com um único responsável do início ao fim. Atuamos em Portugal e estamos também a expandir os nossos serviços em Angola, especialmente na cidade de Luanda.
             </p>
             <p className="text-slate-400 text-sm md:text-lg mt-4 md:mt-6 leading-relaxed">
               A nossa missão é transformar espaços através de um serviço organizado, responsável e atento ao detalhe, garantindo conforto, higiene e confiança em cada trabalho realizado.

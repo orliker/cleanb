@@ -40,7 +40,7 @@ const International = () => {
             transition={{ delay: 0.2 }}
             className="text-slate-400 text-sm md:text-lg max-w-2xl mx-auto mt-6 leading-relaxed"
           >
-            Unimos a experiência e o profissionalismo de dois mercados para oferecer uma marca de limpeza moderna e de confiança.
+            Unimos a experiência e o profissionalismo de dois mercados para oferecer uma marca de remodelação e higienização moderna e de confiança.
           </motion.p>
         </div>
 
@@ -89,7 +89,7 @@ const International = () => {
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Portugal</h3>
               <p className="text-slate-400 text-sm md:text-base mb-8 leading-relaxed">
-                Serviços de limpeza para casas, escritórios, empresas e espaços comerciais em Portugal.
+                Remodelação, acabamentos e limpeza profissional para casas, escritórios, empresas e espaços comerciais em Portugal.
               </p>
               <ul className="space-y-4 mb-10">
                 {['Equipas especializadas', 'Produtos certificados', 'Atenção ao detalhe'].map((item) => (
@@ -119,7 +119,7 @@ const International = () => {
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Angola / Luanda</h3>
               <p className="text-slate-400 text-sm md:text-base mb-8 leading-relaxed">
-                Serviços de limpeza em Angola, com foco em Luanda e em diferentes zonas da cidade.
+                Serviços de remodelação e limpeza em Angola, com foco em Luanda e em diferentes zonas da cidade.
               </p>
               <ul className="space-y-4 mb-10">
                 {['Atuação em toda Luanda', 'Gestão organizada', 'Padrão internacional'].map((item) => (
@@ -179,7 +179,7 @@ const International = () => {
               Uma marca <span className="text-brand-primary italic">Angolana</span> e <span className="text-brand-secondary italic">Portuguesa</span>
             </h3>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-              A Infinity Clean é uma marca angolana e portuguesa criada para oferecer serviços de limpeza profissionais, modernos e adaptados às necessidades de cada cliente. <span className="text-white font-bold block mt-2">Em Angola, o objetivo é atuar em Luanda e em diferentes zonas da cidade.</span>
+              A Bright Infinity é uma marca angolana e portuguesa criada para oferecer remodelação e higienização profissionais, modernas e adaptadas às necessidades de cada cliente. <span className="text-white font-bold block mt-2">Em Angola, o objetivo é atuar em Luanda e em diferentes zonas da cidade.</span>
             </p>
           </div>
         </motion.div>

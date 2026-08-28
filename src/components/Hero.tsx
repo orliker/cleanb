@@ -64,12 +64,14 @@ const Hero = () => {
           </div>
 
           <h1 className="font-serif text-[clamp(2.8rem,11vw,6.5rem)] font-bold text-white tracking-tight leading-[1.05] mb-6 md:mb-8 drop-shadow-2xl">
-            Limpezas que marcam a <span className="text-brand-primary italic font-light drop-shadow-[0_0_15px_rgba(0,128,128,0.5)]">diferença.</span>
+            Obras e limpezas que marcam a <span className="text-brand-primary italic font-light drop-shadow-[0_0_15px_rgba(0,128,128,0.5)]">diferença.</span>
           </h1>
 
           <p className="text-slate-300 text-sm md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed drop-shadow-md">
-            Criamos espaços impecáveis para restaurantes, escritórios, clínicas e negócios locais.
-            <span className="block mt-4 text-white font-bold text-[10px] md:text-xs uppercase tracking-widest bg-brand-dark/50 inline-block px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">Especialistas em Portugal e Luanda</span>
+            Remodelação, pintura, pavimentos e limpeza profissional para casas, escritórios, clínicas e negócios locais. Entregamos o espaço terminado e higienizado.
+            <span className="block mt-4">
+              <span className="text-white font-bold text-[10px] md:text-xs uppercase tracking-widest bg-brand-dark/50 inline-block px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">Remodelação &amp; Higienização · Portugal e Luanda</span>
+            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">

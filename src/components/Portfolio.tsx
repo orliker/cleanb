@@ -95,7 +95,7 @@ const Portfolio = () => {
 
         <div className="mt-20 max-w-2xl mx-auto text-center glass p-6 rounded-3xl border-white/5">
           <p className="text-slate-400 text-sm">
-            Alguns exemplos visuais de limpezas e resultados apresentados pela Infinity Clean.
+            Alguns exemplos visuais de obras, acabamentos e limpezas apresentados pela Bright Infinity.
           </p>
         </div>
       </div>

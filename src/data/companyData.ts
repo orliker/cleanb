@@ -1,11 +1,12 @@
 export const companyData = {
-  name: "Infinity Bright Clean PT",
-  shortName: "Infinity Clean",
-  brandName: "Infinity Clean",
+  name: "Bright Infinity",
+  shortName: "Bright Infinity",
+  brandName: "Bright Infinity",
+  positioning: "Remodelação & Higienização",
   tagline: "Portugal & Angola",
-  description: "Uma marca angolana e portuguesa dedicada a oferecer serviços de limpeza modernos, organizados e de confiança para casas, empresas, escritórios e espaços comerciais.",
-  mission: "Oferecer serviços de limpeza profissionais, organizados e adaptados às necessidades de cada cliente.",
-  vision: "Ser uma marca de referência em limpeza profissional entre Portugal e Angola.",
+  description: "Uma marca angolana e portuguesa de remodelação e higienização: obra, acabamentos e limpeza profissional para casas, empresas, escritórios e espaços comerciais. Serviço chave na mão, do estaleiro à entrega impecável.",
+  mission: "Entregar obra e limpeza com o mesmo padrão de rigor, num serviço único, organizado e adaptado às necessidades de cada cliente.",
+  vision: "Ser uma marca de referência em remodelação e higienização profissional entre Portugal e Angola.",
   values: [
     { title: "Confiança", description: "Relações transparentes e seguras com os nossos clientes." },
     { title: "Qualidade", description: "Excelência em cada detalhe do serviço prestado." },
@@ -17,8 +18,8 @@ export const companyData = {
   contact: {
     whatsapp: "351926114896",
     whatsappLink: "https://wa.me/351926114896",
-    instagram: "https://www.instagram.com/infinity.bright_clean.pt/",
-    instagramUser: "@infinity.bright_clean.pt",
+    instagram: "https://www.instagram.com/bright.infinity/",
+    instagramUser: "@bright.infinity",
     email: "brightinfinity@gmail.com",
     locations: [
       { city: "Lisboa", country: "Portugal" },
@@ -26,6 +27,48 @@ export const companyData = {
     ]
   },
   services: [
+    {
+      id: "remodelacao",
+      title: "Remodelação",
+      description: "Remodelação de interiores do início ao fim: demolição, alvenaria, acabamentos e entrega do espaço pronto a usar.",
+      icon: "Hammer"
+    },
+    {
+      id: "chave-na-mao",
+      title: "Serviço Chave na Mão",
+      description: "Um único interlocutor para toda a intervenção: obra, acabamentos e limpeza final. O cliente recebe o espaço terminado e higienizado.",
+      icon: "KeyRound"
+    },
+    {
+      id: "pintura",
+      title: "Pintura",
+      description: "Preparação de superfícies e pintura interior e exterior, com proteção do espaço e acabamento uniforme.",
+      icon: "Paintbrush"
+    },
+    {
+      id: "chao-vinilico",
+      title: "Aplicação de Chão Vinílico",
+      description: "Nivelamento da base e aplicação de pavimento vinílico, com corte e remates ajustados a cada divisão.",
+      icon: "Layers"
+    },
+    {
+      id: "reparacoes",
+      title: "Reparações",
+      description: "Intervenções pontuais de manutenção e correção: fissuras, humidades, remates, substituições e pequenos arranjos.",
+      icon: "Wrench"
+    },
+    {
+      id: "interiores",
+      title: "Interiores",
+      description: "Acabamentos e detalhes de interiores para valorizar o espaço, coordenados com o resto da obra.",
+      icon: "Sofa"
+    },
+    {
+      id: "industrial",
+      title: "Limpeza Industrial",
+      description: "Higienização de armazéns, unidades de produção e espaços técnicos, com meios adequados a cada tipo de instalação.",
+      icon: "Factory"
+    },
     {
       id: "residencial",
       title: "Limpeza Residencial",
@@ -156,7 +199,7 @@ export const companyData = {
     {
       name: "Fanini Muamungo",
       role: "CEO / Fundador",
-      description: "Técnico de Lapidação de Diamantes e Analista de Cibersegurança, Fanini Muamungo assume a liderança da Infinity Clean com foco em organização, profissionalismo e visão estratégica para Portugal e Angola.",
+      description: "Técnico de Lapidação de Diamantes e Analista de Cibersegurança, Fanini Muamungo assume a liderança da Bright Infinity com foco em organização, profissionalismo e visão estratégica para Portugal e Angola.",
       image: "/images/equipa/fanini-muamungo-ceo.jpg",
       contact: "+351 926 114 896",
       email: "brightinfinity@gmail.com",

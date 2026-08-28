@@ -14,11 +14,11 @@ const Team = () => {
           <div className="max-w-2xl">
             <span className="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs">Liderança</span>
             <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-white tracking-tighter">
-              À frente da <span className="text-gradient-teal italic">Infinity Clean</span>
+              À frente da <span className="text-gradient-teal italic">Bright Infinity</span>
             </h2>
           </div>
           <p className="text-slate-400 text-sm md:text-base max-w-md">
-            À frente da Infinity Clean está uma liderança focada em organização, confiança e excelência, com visão para desenvolver uma marca angolana e portuguesa de referência em serviços de limpeza.
+            À frente da Bright Infinity está uma liderança focada em organização, confiança e excelência, com visão para desenvolver uma marca angolana e portuguesa de referência em remodelação e higienização.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ const Team = () => {
             
             <div className="flex flex-col lg:flex-row items-center justify-center md:justify-start gap-3 md:gap-4 w-full mt-auto">
               <a 
-                href={`https://wa.me/351926114896?text=${encodeURIComponent('Olá, gostaria de saber mais sobre os serviços da Infinity Clean.')}`} 
+                href={`https://wa.me/351926114896?text=${encodeURIComponent('Olá, gostaria de saber mais sobre os serviços da Bright Infinity.')}`} 
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-start gap-3 w-full lg:w-auto px-5 py-3 md:px-6 md:py-4 bg-white/5 hover:bg-brand-primary rounded-xl text-white font-medium transition-all group/btn border border-white/5 hover:border-brand-primary shadow-lg min-w-[200px]"
               >

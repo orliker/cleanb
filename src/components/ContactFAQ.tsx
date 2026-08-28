@@ -154,7 +154,9 @@ export const FAQ = () => {
 
   const faqs = [
     { q: "Quais as zonas de atendimento em Portugal?", a: "Atuamos principalmente na zona de Lisboa, Cascais, Sintra, Oeiras e Loures, mas estamos disponíveis para deslocações sob consulta." },
-    { q: "Prestão serviços em Luanda?", a: "Sim, estamos em fase de expansão em Angola, com equipas preparadas para atuar em toda a cidade de Luanda." },
+    { q: "Prestam serviços em Luanda?", a: "Sim, estamos em fase de expansão em Angola, com equipas preparadas para atuar em toda a cidade de Luanda." },
+    { q: "Fazem obra ou só limpeza?", a: "Fazemos as duas coisas. Tratamos da remodelação — demolição, pintura, aplicação de chão vinílico, reparações e acabamentos — e da limpeza final, para que receba o espaço terminado e higienizado sem ter de coordenar várias empresas." },
+    { q: "O que inclui o serviço chave na mão?", a: "Um único responsável do princípio ao fim: planeamento da intervenção, execução da obra, acabamentos e limpeza pós-obra. O cliente tem um só interlocutor e recebe o espaço pronto a usar." },
     { q: "Como posso obter um orçamento?", a: "Pode preencher o formulário acima ou contactar-nos diretamente via WhatsApp. A resposta costuma demorar menos de 15 minutos." },
     { q: "Fazem limpezas pós-obra?", a: "Sim, somos especialistas em limpezas pós-obra profundas, removendo resíduos de construção e deixando o espaço pronto a habitar." }
   ];
@@ -211,7 +213,7 @@ export const Footer = () => {
               </span>
             </a>
             <p className="text-slate-500 text-xs md:text-sm max-w-md leading-relaxed mb-6 md:mb-8">
-              Uma marca angolana e portuguesa dedicada a serviços de limpeza profissional. Elevamos o padrão de higiene e organização em residências e empresas, com atuação em Portugal e foco estratégico em Luanda.
+              Uma marca angolana e portuguesa de remodelação e higienização. Da obra ao acabamento e da limpeza pós-obra à manutenção, elevamos o padrão em residências e empresas, com atuação em Portugal e foco estratégico em Luanda.
             </p>
             <a
               href={`mailto:${companyData.contact.email}`}
